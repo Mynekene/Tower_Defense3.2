@@ -114,5 +114,5 @@ class Mob:
         hp_ratio = self.hp / max_hp
         bar_x = self.x - bar_width // 2
         bar_y = self.y - rect.height // 2 - 10
-        pygame.draw.rect(window, (255, 0, 0), (bar_x, bar_y, bar_width, bar_height))
-        pygame.draw.rect(window, (0, 255, 0), (bar_x, bar_y, int(bar_width * hp_ratio), bar_height))
+        pygame.draw.rect(window, RED, (bar_x, bar_y, bar_width, bar_height))
+        pygame.draw.rect(window, GREEN, (bar_x, bar_y, int(bar_width * hp_ratio), bar_height))
