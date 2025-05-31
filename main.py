@@ -77,7 +77,7 @@ while game:
             current_wave_mobs.append(Mob(path, wave, "boss"))
             boss_spawned_this_wave = True
         elif mob_spawn_timer >= mob_spawn_delay and mob_index < mobs_per_wave:
-            if random.random() < 0.10:
+            if random.random() < 0.1 + wave * 0.01 and wave >= 5:
                 current_wave_mobs.append(Mob(path, wave, "miniboss"))
             else:
                 current_wave_mobs.append(Mob(path, wave, "normal"))
